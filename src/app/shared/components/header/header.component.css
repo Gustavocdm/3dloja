@@ -1,0 +1,12 @@
+mat-toolbar {
+    background-color: #EFEFEF;
+    justify-content: space-between;
+    /* color: #FFFFFF; */
+}
+.logo {
+    height: 30px;
+}
+.link {
+    height: 100%;
+    cursor: pointer;
+}
