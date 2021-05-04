@@ -1,12 +1,18 @@
 mat-toolbar {
     background-color: #EFEFEF;
-    justify-content: space-between;
+    justify-content: space-around;
     /* color: #FFFFFF; */
 }
 .logo {
     height: 30px;
 }
+.link-list {
+    display: flex;
+}
 .link {
-    height: 100%;
+    padding: 10px;
     cursor: pointer;
+}
+.link:hover {
+    background-color: #F5F5F5;
 }
