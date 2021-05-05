@@ -1,3 +1,13 @@
 <div class="container">
-    app-produto
+    <div class="row">
+        <div class="col-sm-4">
+            <app-produto-card [mostrarBotaoComprar]="false" [produto]="produto"></app-produto-card>
+        </div>
+        <!-- <form [formGroup]="formulario" class="col-sm-8">
+            <mat-form-field>
+                <mat-label>Email</mat-label>
+                <input type="email" matInput [formControl]="formulario.get('email')" placeholder="Ex. email@example.com">
+            </mat-form-field>
+        </form> -->
+    </div>
 </div>

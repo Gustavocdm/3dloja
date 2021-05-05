@@ -5,6 +5,7 @@ mat-toolbar {
 }
 .logo {
     height: 30px;
+    cursor: pointer;
 }
 .link-list {
     display: flex;

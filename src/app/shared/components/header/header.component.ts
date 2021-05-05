@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -8,9 +8,15 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  @Output() voltarHome = new EventEmitter<void>();
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onVoltarHome() {
+    this.voltarHome.next();
   }
 
 }

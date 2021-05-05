@@ -21,8 +21,7 @@ export class HomeComponent implements OnInit {
   }
 
   onComprarProduto(produto: Produto) {
-    console.log(produto);
-    this.router.navigate(['']);
+    this.router.navigate(['/produtos', produto.id]);
   }
 
 }

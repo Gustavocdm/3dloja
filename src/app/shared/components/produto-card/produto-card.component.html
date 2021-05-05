@@ -6,8 +6,8 @@
     <mat-card-content class="conteudo-card">
         {{ produto.descricao | maxCharacter:100 }}
     </mat-card-content>
-    <mat-card-actions>
+    <mat-card-actions class="rodape">
         <span class="preco mr-2">{{ produto.preco | currency }}</span>
-        <button class="btn btn-sm btn-primary" (click)="onComprar()">Comprar</button>
+        <button *ngIf="mostrarBotaoComprar" class="btn btn-sm btn-primary" (click)="onComprar()">Comprar</button>
     </mat-card-actions>
 </mat-card>

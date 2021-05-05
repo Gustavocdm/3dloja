@@ -9,3 +9,7 @@
 .conteudo-card {
     cursor: context-menu;
 }
+
+.rodape {
+    border-top: 1px solid #ccc;
+}

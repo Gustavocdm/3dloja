@@ -10,6 +10,7 @@ import { Produto } from '../../../produto/produto';
 })
 export class ProdutoCardComponent implements OnInit {
   @Input() produto: Produto;
+  @Input() mostrarBotaoComprar: boolean = true;
   @Output() comprarClicado = new EventEmitter<void>();
 
   constructor() { }
