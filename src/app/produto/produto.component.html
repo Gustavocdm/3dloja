@@ -3,11 +3,55 @@
         <div class="col-sm-4">
             <app-produto-card [mostrarBotaoComprar]="false" [produto]="produto"></app-produto-card>
         </div>
-        <!-- <form [formGroup]="formulario" class="col-sm-8">
-            <mat-form-field>
-                <mat-label>Email</mat-label>
-                <input type="email" matInput [formControl]="formulario.get('email')" placeholder="Ex. email@example.com">
-            </mat-form-field>
-        </form> -->
+        <div class="col-sm-8">
+            <form [formGroup]="formulario" (ngSubmit)="onComprar()" class="row">
+                <mat-form-field class="col-12">
+                    <mat-label>Email</mat-label>
+                    <input type="email" formControlName="email" matInput placeholder="Ex. email@example.com">
+                </mat-form-field>
+
+                <div formGroupName="endereco">
+                    <mat-form-field class="col-sm-3">
+                        <mat-label>CEP</mat-label>
+                        <input type="text" formControlName="cep" matInput placeholder="Ex. 12345-678">
+                    </mat-form-field>
+    
+                    <mat-form-field class="col-sm-3">
+                        <mat-label>Nº</mat-label>
+                        <input type="text" formControlName="numero" matInput>
+                    </mat-form-field>
+    
+                    <mat-form-field class="col-sm-6">
+                        <mat-label>Complemento</mat-label>
+                        <input type="text" formControlName="complemento" matInput>
+                    </mat-form-field>
+    
+                    <mat-form-field class="col-sm-12">
+                        <mat-label>Rua</mat-label>
+                        <input type="text" formControlName="rua" matInput>
+                    </mat-form-field>
+    
+                    <mat-form-field class="col-sm-5">
+                        <mat-label>Bairro</mat-label>
+                        <input type="text" formControlName="bairro" matInput>
+                    </mat-form-field>
+
+                    <mat-form-field class="col-sm-4">
+                        <mat-label>Cidade</mat-label>
+                        <input type="text" formControlName="cidade" matInput>
+                    </mat-form-field>
+    
+                    <mat-form-field class="col-sm-3" appearance="fill">
+                        <mat-label>Estado</mat-label>
+                        <select matNativeControl formControlName="estado">
+                            <option [value]="estado.sigla" *ngFor="let estado of ESTADOS_BRASILEIROS">{{ estado.nome }}</option>
+                            </select>
+                    </mat-form-field>
+                </div>
+
+                <button type="submit" class="btn btn-success">Enviar</button>
+    
+            </form>
+        </div>
     </div>
 </div>
