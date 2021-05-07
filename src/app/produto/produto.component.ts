@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { tap } from 'rxjs/operators';
 
 import { ProdutoService } from './produto.service';
 import { Produto } from './produto';
@@ -12,7 +13,6 @@ import { ESTADOS_BRASILEIROS } from './../shared/literals/estados-brasileiros';
   styleUrls: ['./produto.component.css']
 })
 export class ProdutoComponent implements OnInit {
-
   produto: Produto;
   formulario: FormGroup;
   readonly ESTADOS_BRASILEIROS = ESTADOS_BRASILEIROS;

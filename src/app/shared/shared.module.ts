@@ -11,13 +11,15 @@ import { HeaderComponent } from './components/header/header.component';
 import { ProdutoCardComponent } from './components/produto-card/produto-card.component';
 import { MatCardModule } from '@angular/material/card';
 import { MaxCharacterPipe } from './pipes/max-caracter/max-character.pipe';
+import { BtnSubmitComponent } from './components/btn-submit/btn-submit.component';
 
 
 @NgModule({
   declarations: [
     HeaderComponent,
     ProdutoCardComponent,
-    MaxCharacterPipe
+    MaxCharacterPipe,
+    BtnSubmitComponent
   ],
   imports: [
     CommonModule,
@@ -32,7 +34,8 @@ import { MaxCharacterPipe } from './pipes/max-caracter/max-character.pipe';
   exports: [
     HeaderComponent,
     ProdutoCardComponent,
-    MaxCharacterPipe
+    MaxCharacterPipe,
+    BtnSubmitComponent
   ]
 })
 export class SharedModule { }

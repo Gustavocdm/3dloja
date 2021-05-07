@@ -49,7 +49,7 @@
                     </mat-form-field>
                 </div>
 
-                <button type="submit" class="btn btn-success">Enviar</button>
+                <app-btn-submit [podeEnviar]="(formulario.statusChanges | async) === 'VALID'"></app-btn-submit>
     
             </form>
         </div>
