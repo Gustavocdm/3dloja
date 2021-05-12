@@ -12,14 +12,15 @@ import { ProdutoCardComponent } from './components/produto-card/produto-card.com
 import { MatCardModule } from '@angular/material/card';
 import { MaxCharacterPipe } from './pipes/max-caracter/max-character.pipe';
 import { BtnSubmitComponent } from './components/btn-submit/btn-submit.component';
-
+import { RodapeComponent } from './components/rodape/rodape.component';
 
 @NgModule({
   declarations: [
     HeaderComponent,
     ProdutoCardComponent,
     MaxCharacterPipe,
-    BtnSubmitComponent
+    BtnSubmitComponent,
+    RodapeComponent
   ],
   imports: [
     CommonModule,
@@ -35,7 +36,8 @@ import { BtnSubmitComponent } from './components/btn-submit/btn-submit.component
     HeaderComponent,
     ProdutoCardComponent,
     MaxCharacterPipe,
-    BtnSubmitComponent
+    BtnSubmitComponent,
+    RodapeComponent
   ]
 })
 export class SharedModule { }
