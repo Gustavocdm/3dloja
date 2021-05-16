@@ -47,6 +47,11 @@
                             <option [value]="estado.sigla" *ngFor="let estado of ESTADOS_BRASILEIROS">{{ estado.nome }}</option>
                             </select>
                     </mat-form-field>
+
+                    <mat-form-field class="col-sm-4">
+                        <mat-label>Nº para contato (XX) X XXXX-XXXX</mat-label>
+                        <input type="text" formControlName="numero" matInput>
+                    </mat-form-field>
                 </div>
 
                 <app-btn-submit [podeEnviar]="(formulario.statusChanges | async) === 'VALID'"></app-btn-submit>
