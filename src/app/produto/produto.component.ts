@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { tap } from 'rxjs/operators';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms'; 
 
 import { ProdutoService } from './produto.service';
 import { Produto } from './produto';
@@ -29,6 +28,7 @@ export class ProdutoComponent implements OnInit {
 
     this.formulario = this.formBuilder.group({
       email: [null, [Validators.required, Validators.email]],
+      telefone: [null, []],
       endereco: this.formBuilder.group({
         cep: [null, [Validators.required]],
         numero: [null, [Validators.required]],

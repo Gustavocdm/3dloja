@@ -5,9 +5,11 @@
     text-align: center;
     color: #ffffff;
     background-color: #0f55e0;
-    padding: 10px 0;
-    height: 80px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-img{
-    width: 20px;
+img {
+    height: 16px;
 }

@@ -1,13 +1,18 @@
 <div class="container">
     <div class="row">
-        <div class="col-sm-4">
+        <div class="col-sm-4" *ngIf="produto">
             <app-produto-card [mostrarBotaoComprar]="false" [produto]="produto"></app-produto-card>
         </div>
-        <div class="col-sm-8">
+        <div class="col">
             <form [formGroup]="formulario" (ngSubmit)="onComprar()" class="row">
-                <mat-form-field class="col-12">
+                <mat-form-field class="col-sm-6">
                     <mat-label>Email</mat-label>
                     <input type="email" formControlName="email" matInput placeholder="Ex. email@example.com">
+                </mat-form-field>
+
+                <mat-form-field class="col-sm-6">
+                    <mat-label>Nº para contato</mat-label>
+                    <input type="text" formControlName="telefone" matInput>
                 </mat-form-field>
 
                 <div formGroupName="endereco">
@@ -47,13 +52,8 @@
                             <option [value]="estado.sigla" *ngFor="let estado of ESTADOS_BRASILEIROS">{{ estado.nome }}</option>
                             </select>
                     </mat-form-field>
-
-                    <mat-form-field class="col-sm-4">
-                        <mat-label>Nº para contato (XX) X XXXX-XXXX</mat-label>
-                        <input type="text" formControlName="numero" matInput>
-                    </mat-form-field>
                 </div>
-
+                
                 <app-btn-submit [podeEnviar]="(formulario.statusChanges | async) === 'VALID'"></app-btn-submit>
     
             </form>

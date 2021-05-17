@@ -8,15 +8,9 @@ import { Component, OnInit, ChangeDetectionStrategy, Output, EventEmitter } from
 })
 export class HeaderComponent implements OnInit {
 
-  @Output() voltarHome = new EventEmitter<void>();
-
   constructor() { }
 
   ngOnInit(): void {
-  }
-
-  onVoltarHome() {
-    this.voltarHome.next();
   }
 
 }

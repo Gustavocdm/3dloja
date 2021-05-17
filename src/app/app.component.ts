@@ -9,8 +9,4 @@ import { Router } from '@angular/router';
 export class AppComponent {
   constructor(private router: Router) { }
 
-  onVoltarHome() {
-    this.router.navigate(['/home']);
-  }
-
 }
